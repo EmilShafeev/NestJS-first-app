@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "c31f26c5-4ece-4b31-923d-7cf40782b55c",
+		"name": "touch-5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6925221"
+	},
+	"item": [
+		{
+			"name": "[invalid pass] Create Users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admien@mail.ru\",\n    \"password\": 12323234\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMSIsImlkIjo5LCJyb2xlcyI6W3siaWQiOjEsInZhbHVlIjoiQURNSU4iLCJkZXNjcmlwdGlvbiI6ItCQ0LTQvNC40L3QuNGB0YLRgNCw0YLQvtGAIiwiY3JlYXRlZEF0IjoiMjAyMi0xMC0xOFQwNTo1OTo0NC4xMzlaIiwidXBkYXRlZEF0IjoiMjAyMi0xMC0xOFQwNTo1OTo0NC4xMzlaIn1dLCJpYXQiOjE2NjYwNzkzNjQsImV4cCI6MTY2NjE2NTc2NH0.nPgsYYyHXRzsLodG2d-IcnyCeMSPXkCSNeJ-Mg07nXk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlVTRVIyIiwiaWQiOjcsInJvbGVzIjpbeyJpZCI6MiwidmFsdWUiOiJVU0VSIiwiZGVzY3JpcHRpb24iOiLQn9C-0LvRjNC30L7QstCw0YLQtdC70YwiLCJjcmVhdGVkQXQiOiIyMDIyLTEwLTE4VDA2OjA1OjI3LjcyOFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTEwLTE4VDA2OjA1OjI3LjcyOFoiLCJVc2VyUm9sZXMiOnsiaWQiOjMsInJvbGVJZCI6MiwidXNlcklkIjo3fX1dLCJpYXQiOjE2NjYwNzg1ODYsImV4cCI6MTY2NjE2NDk4Nn0.bP5HYNmR3CFv9X78CbQ-XIrFJp19eusJ0vgvK35U2hA",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Roles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/roles/USER",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"roles",
+						"USER"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Roles",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"value\": \"USER\",\n    \"description\": \"Пользователь\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/roles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin1\",\n    \"password\": \"admin1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/auth/registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin\",\n    \"password\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMSIsImlkIjo5LCJyb2xlcyI6W3siaWQiOjEsInZhbHVlIjoiQURNSU4iLCJkZXNjcmlwdGlvbiI6ItCQ0LTQvNC40L3QuNGB0YLRgNCw0YLQvtGAIiwiY3JlYXRlZEF0IjoiMjAyMi0xMC0xOFQwNTo1OTo0NC4xMzlaIiwidXBkYXRlZEF0IjoiMjAyMi0xMC0xOFQwNTo1OTo0NC4xMzlaIn1dLCJpYXQiOjE2NjYwNzkzNjQsImV4cCI6MTY2NjE2NTc2NH0.nPgsYYyHXRzsLodG2d-IcnyCeMSPXkCSNeJ-Mg07nXk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"value\": \"ADMIN\",\n    \"userId\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/users/role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ban",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMSIsImlkIjo5LCJyb2xlcyI6W3siaWQiOjEsInZhbHVlIjoiQURNSU4iLCJkZXNjcmlwdGlvbiI6ItCQ0LTQvNC40L3QuNGB0YLRgNCw0YLQvtGAIiwiY3JlYXRlZEF0IjoiMjAyMi0xMC0xOFQwNTo1OTo0NC4xMzlaIiwidXBkYXRlZEF0IjoiMjAyMi0xMC0xOFQwNTo1OTo0NC4xMzlaIn1dLCJpYXQiOjE2NjYwNzkzNjQsImV4cCI6MTY2NjE2NTc2NH0.nPgsYYyHXRzsLodG2d-IcnyCeMSPXkCSNeJ-Mg07nXk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 5123123,\n    \"banReason\": \"Не слушался админа\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/users/ban",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"ban"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMSIsImlkIjo5LCJyb2xlcyI6W3siaWQiOjEsInZhbHVlIjoiQURNSU4iLCJkZXNjcmlwdGlvbiI6ItCQ0LTQvNC40L3QuNGB0YLRgNCw0YLQvtGAIiwiY3JlYXRlZEF0IjoiMjAyMi0xMC0xOFQwNTo1OTo0NC4xMzlaIiwidXBkYXRlZEF0IjoiMjAyMi0xMC0xOFQwNTo1OTo0NC4xMzlaIn1dLCJpYXQiOjE2NjYwNzkzNjQsImV4cCI6MTY2NjE2NTc2NH0.nPgsYYyHXRzsLodG2d-IcnyCeMSPXkCSNeJ-Mg07nXk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 5123123,\n    \"banReason\": \"Не слушался админа\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/users/ban",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"ban"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
